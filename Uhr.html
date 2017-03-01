@@ -1,0 +1,32 @@
+<html>
+	<head>
+		
+	</head>
+	<body>
+		<p class="over" id="uhr"></p>
+		<p class="over" id="uhr"></p>
+		<p class="over" id="uhr"></p>
+		<script>
+			var container = document.getElementsByClassName("over");
+			alert(container.length);
+			console.log(container);
+			for(var i = '0'; i < container.length; i++){
+				container[i].innerHTML = "Test";
+				container[i].addEventListener("mouseenter", function(){
+					console.log(container[i]);
+					container[i].style["background-color"] = "red";
+				});
+			}
+			
+			var count = 0;
+			function uhr(){
+				setTimeout(function(){
+					document.getElementById("uhr").innerHTML = count;
+					count++;
+					uhr();
+				}, 1000);
+			}
+			uhr();
+			</script>
+	</body>
+</html>

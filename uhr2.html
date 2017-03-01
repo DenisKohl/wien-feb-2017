@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<script src="jquery-3.1.1.min.js" ></script>
+		<script>
+			$(document).ready(function(){
+				$("#uhr").on('click', function(){
+					console.log(this);
+					this.innerHTML = "treffer";
+				});
+				$(".over").on('mouseenter',function(){
+					this.style["background"] = "red";
+				});
+			});
+			
+		</script>
+	</head>
+	<body>
+		<p class="over" id="uhr">Hallo</p>
+		<p class="over" >test</p>
+		<p class="over" >test</p>
+
+	</body>
+</html>

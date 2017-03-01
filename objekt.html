@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<script src="jquery-3.1.1.min.js" ></script>
+	</head>
+	<body>
+		<div id="obj1"></div>
+		<div id="obj2"></div>
+		<div id="obj3"></div>
+		<script>
+			"use strict";
+			var obj1 = {
+				"name":"Hans",
+				"beruf":"Maurer",
+				"dump": function(){
+					console.log("Name: " + this.name + " " + "Beruf: " + this.beruf);
+				}
+			};
+			obj1.dump();
+			$("#obj1").html(obj1.name);
+			//ES6
+			class Person{
+				constructor(name, beruf){
+					this.beruf = "In Ausbildung";
+					if( beruf !== undefined){
+						this.beruf = beruf;
+					}
+					this.name = name;
+					
+				};
+				dump(){
+					console.log("Name: " + this.name + " " + "Beruf: " + this.beruf);
+				}
+			}
+			var p1 = new Person("Micha", "Baumeister");
+			p1.dump();
+			console.log(p1);
+			$("#obj2").html(p1.name);
+			//ES5
+			function Arbeiter(name, beruf){
+				this.name = name;
+				this.beruf = beruf;
+			}
+			Arbeiter.prototype.dump = function(){
+				console.log("Name: " + this.name + " " + "Beruf: " + this.beruf);
+			};
+			
+			var a1 = new Arbeiter("Xaver", "Bauer");
+			console.log(a1);
+			 $("#obj3").html(a1.name);
+			 
+			 var p2 = new Person("Anna");
+			 console.log(p2);
+			
+			
+		</script>
+	</body>
+</html>

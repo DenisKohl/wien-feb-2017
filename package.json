@@ -1,0 +1,15 @@
+{
+  "name": "http_server",
+  "version": "1.0.0",
+  "description": "beispiel http Server",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "dependencies":{
+	  "express": "latest"
+  },
+  "author": "Denis Kohl",
+  "license": "ISC"
+}

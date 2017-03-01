@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<script src="jquery-3.1.1.min.js" ></script>
+		<script src="fin.js" ></script>
+		<script>
+			$(document).ready(function(){
+				$.ajax({
+					url: "http://localhost:30000/json",
+					data:{"name":"Günter"},
+					dataType: 'json'
+					}).done(function(res){
+						$('#name').html(res.name);
+						$('#beruf').html(res.beruf);
+					}).fail(function( res ){
+						console.log(res);
+						alert("Alles doof ohne json");
+					});
+			});
+			</script>
+	</head>
+	<body>
+		<p id="name">Load ... </p>
+		<p id="beruf"></p>
+	</body>
+</html>
